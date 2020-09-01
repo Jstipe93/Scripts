@@ -1,6 +1,6 @@
 #!/bin/sh
 # run a speed test to the given server,  server must be an IP address
-server=$(config get config.speedtest_server)
+server=$(config get cloud.aview.speedtest_server)
 results='speedtest'
 if [ "$(expr "$server" : '[0-9]\{1,3\}.[0-9]\{1,3\}.[0-9]\{1,3\}.[0-9]\{1,3\}$')" -eq 0 ]; then
   server=$(resolveip $server)
